@@ -28,9 +28,6 @@ const Cart = ({ cartItems, onAdd, onRemove }) => {
             <span>Umumiy summa:</span>
             <span className="total-amount">${totalPrice}</span>
           </div>
-          <button className="checkout-btn" onClick={() => window.Telegram.WebApp.MainButton.click()}>
-            Buyurtma berish
-          </button>
         </>
       )}
     </div>

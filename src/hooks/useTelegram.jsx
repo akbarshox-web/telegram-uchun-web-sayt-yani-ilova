@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { tele } from '../utils/telegram.jsx';
 
 export const useTelegram = () => {

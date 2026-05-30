@@ -118,20 +118,12 @@ function App() {
       <Header />
       
       {activeView === 'products' ? (
-        <>
-          {cartItems.length > 0 && (
-            <div className="cart-summary" onClick={() => setView('cart')}>
-              <span>🛒 {cartItems.reduce((a, c) => a + c.qty, 0)} mahsulot</span>
-              <span>Jami: ${cartItems.reduce((a, c) => a + c.price * c.qty, 0).toFixed(2)}</span>
-            </div>
-          )}
-          <ProductList
-            products={products}
-            onAdd={onAdd}
-            onRemove={onRemove}
-            cartItems={cartItems}
-          />
-        </>
+        <ProductList
+          products={products}
+          onAdd={onAdd}
+          onRemove={onRemove}
+          cartItems={cartItems}
+        />
       ) : (
         <Cart 
           cartItems={cartItems} 
